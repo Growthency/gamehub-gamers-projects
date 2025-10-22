@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/Context";
+import logo from "/logo.png";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const Header = () => {
       <div className="navbar-container">
         <div className="navbar-start">
           <Link to="/" className="logo">
-            Gamehub
+            <img src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center">
@@ -39,7 +40,7 @@ const Header = () => {
                   src={
                     user.photoURL
                       ? user.photoURL
-                      : "https://i.ibb.co/L1b1sds/default-avatar-profile-icon-vector-social-media-user-photo-183-0.jpg"
+                      : "https://avatars.githubusercontent.com/u/143309391?v=4"
                   }
                   alt="User"
                 />

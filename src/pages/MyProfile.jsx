@@ -14,7 +14,7 @@ const MyProfile = () => {
           src={
             user.photoURL
               ? user.photoURL
-              : "https://i.ibb.co/L1b1sds/default-avatar-profile-icon-vector-social-media-user-photo-183-0.jpg"
+              : "https://avatars.githubusercontent.com/u/143309391?v=4"
           }
           alt="Profile"
           className="profile-pic"

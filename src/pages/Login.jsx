@@ -84,7 +84,7 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <div className="auth-divider">OR</div>
+        <div className="auth-divider flex">OR</div>
         <button onClick={handleGoogleSignIn} className="btn btn-google">
           Continue with Google
         </button>
