@@ -125,7 +125,6 @@ ul {
 .navbar {
   background-color: #2a2a4e;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #404066;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -168,7 +167,20 @@ ul {
   background-color: #f9a826;
   transition: width 0.3s ease;
 }
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
 
+.hamburger-icon {
+  width: 28px;
+  height: 28px;
+}
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
@@ -180,8 +192,39 @@ ul {
 
 .navbar-end {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+.navbar-mobile-menu {
+  background-color: #2a2a4e;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  width: 100%;
 }
 
+.navbar-mobile-menu.open {
+  max-height: 500px;
+}
+
+.nav-links-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.nav-links-mobile li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.nav-links-mobile li a:hover,
+.nav-links-mobile li a.active {
+  background-color: #8a2be2;
+  color: #fff;
+}
 .profile-avatar {
   width: 40px;
   height: 40px;
@@ -708,8 +751,12 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .navbar-center {
+  .navbar-center-desktop {
     display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
   }
 
   .slide-content {
