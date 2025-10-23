@@ -4,7 +4,7 @@ Gamehub is an engaging online library for discovering and supporting game develo
 
 ## Live URL
 
-**Live Site:** [https://your-live-url.netlify.app](https://your-live-url.netlify.app)
+**Live Site:** [https://gamehubprojects.netlify.app](https://gamehubprojects.netlify.app)
 
 ## Project Purpose
 
