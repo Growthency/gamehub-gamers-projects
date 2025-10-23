@@ -32,7 +32,6 @@ const router = createBrowserRouter([
             <GameDetails />
           </PrivateRoute>
         ),
-        loader: () => fetch("/games.json"),
       },
       {
         path: "/my-profile",

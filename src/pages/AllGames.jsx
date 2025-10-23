@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import GameCard from "../components/GameCard";
 import useTitle from "../hooks/useTitle";
-import Loader from "../components/Loader";
+import games from "../games.json";
 
 const AllGames = () => {
   useTitle("All Games");
-  const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("games.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setGames(data);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
 
   return (
     <div className="page-container">

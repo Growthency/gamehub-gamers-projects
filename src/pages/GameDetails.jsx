@@ -1,27 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
-import Loader from "../components/Loader";
+import games from "../games.json";
 
 const GameDetails = () => {
-  const [game, setGame] = useState(null);
-  const [loading, setLoading] = useState(true);
   const { id } = useParams();
-  const allGames = useLoaderData();
+
+  const game = games.find((g) => g.id === id);
 
   useTitle(game ? game.title : "Game Details");
-
-  useEffect(() => {
-    const findGame = allGames.find((g) => g.id === id);
-    if (findGame) {
-      setGame(findGame);
-    }
-    setLoading(false);
-  }, [id, allGames]);
-
-  if (loading) {
-    return <Loader />;
-  }
 
   if (!game) {
     return (
