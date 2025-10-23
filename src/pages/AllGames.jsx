@@ -9,7 +9,7 @@ const AllGames = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/games.json")
+    fetch("games.json")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
