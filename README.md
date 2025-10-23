@@ -24,9 +24,9 @@ This project is built as an assignment to increase my skills in React, React Rou
 
 ## NPM Packages Used
 
-- **react**
-- **react-router-dom**
-- **firebase**
-- **react-hot-toast**
-- **swiper**
-- **framer-motion**
+- **React**
+- **React-router-dom**
+- **Firebase**
+- **React-hot-toast**
+- **Swiper**
+- **React Spring**
