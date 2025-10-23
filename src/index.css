@@ -343,6 +343,7 @@ ul {
   position: relative;
   z-index: 2;
   max-width: 50%;
+  margin-left: 2rem;
 }
 
 .slide-content h2 {
